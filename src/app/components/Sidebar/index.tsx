@@ -31,9 +31,9 @@ const Sidebar = () => {
             </div>
           </Link>
         </div>
-    <div className={`ml-8 cursor-pointer ${ activeNavItem === '/jobPosting' ? 'text-black' : 'text-white' }`}
-          onClick={() => handleNavItemClick('/jobPosting')}>
-          <Link href="/jobPosting">
+    <div className={`ml-8 cursor-pointer ${ activeNavItem === '/' ? 'text-black' : 'text-white' }`}
+          onClick={() => handleNavItemClick('/')}>
+          <Link href="/">
             <div className="flex"><RxCounterClockwiseClock size={24} className="mr-2" />
               Job History
             </div>

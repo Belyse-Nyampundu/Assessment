@@ -39,6 +39,7 @@ const SignupPage = () => {
       ...formData,
       [name]: value,
     });
+    
     if (name === "confirm_password") {
       if (formData.password !== value) {
         setPasswordMatchError(true);
@@ -80,9 +81,6 @@ const SignupPage = () => {
   </div>
             </div>
             <div className=" w-2/4 lg:w-1/3 p-4 ml-4">
-              {/* <h2 className="text-3xl md:text-2xl text-gray-800 md:ml--1 rounded-md mb-5 ml-16">
-                Sign up
-              </h2> */}
               <h3 className="text-2xl mt-12 md:text-3xl font-semibold text-gray-800">
                 Sign up
               </h3>
@@ -92,7 +90,7 @@ const SignupPage = () => {
   <input
     type="text"
     name="firstname"
-    placeholder="Name"
+    placeholder="First name"
     value={formData.firstname}
     onChange={handleInputChange}
     className="w-full md:w-[400px] h-[40px] px-4 py-2 border border-gray-300 rounded-md mb-2 rounded-xl focus:outline-none focus:border-primary text-gray-600"
@@ -104,7 +102,7 @@ const SignupPage = () => {
   <input
     type="text"
     name="lastname"
-    placeholder="Name"
+    placeholder="Last name"
     value={formData.lastname}
     onChange={handleInputChange}
     className="w-full md:w-[400px] h-[40px] px-4 py-2 border border-gray-300 rounded-md mb-2 rounded-xl focus:outline-none focus:border-primary text-gray-600"
@@ -143,35 +141,7 @@ const SignupPage = () => {
                 </div>
               </div>
                 <div className="">
-                  {/* <input
-                    type={showConfirmPassword ? "text" : "password"}
-                    name="confirm_password"
-                    placeholder="Confirm Password"
-                    value={formData.confirm_password}
-                    onChange={handleInputChange}
-                    className={`w-full md:w-[520px] h-[55px] px-4 py-2 border ${passwordMatchError
-                      ? "border-red-500"
-                      : "border-gray-300"
-                      } rounded-md mb-5 rounded-xl focus:outline-none focus:border-primary text-gray-600 pr-12 ml-16`}
-                  /> */}
-                  {/* <FontAwesomeIcon
-                    icon={showConfirmPassword ? faEye : faEyeSlash}
-                    style={{
-                      color: "grey",
-                      position: "absolute",
-                      top: "35.5%",
-                      right: "150px",
-                      transform: "translateY(-50%)",
-                      cursor: "pointer",
-                    }}
-                    onClick={() => togglePasswordVisibility("confirm_password")}
-                  /> */}
                 </div>
-                {/* {passwordMatchError && (
-                  <div className="text-red-500 ml-16 mt-2">
-                    Passwords do not match.
-                  </div>
-                )} */}
                 <button
                   type="submit"
                   className="w-full md:w-[400px] h-[40px] px-6 py-2 border bg-[#27779b] text-white rounded-md mb-12 mt-24 rounded-xl focus:outline-none focus:border-primary font-semibold"

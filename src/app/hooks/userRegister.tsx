@@ -21,15 +21,15 @@ const useCreateUsers = () => {
 
       const createdUser = await registerUser(formData);
       console.log(createdUser,"success")
-      if (createdUser.success === true){
+      if (createdUser.createdUser){
+        console.log("Signup successful")
         setUser(createdUser);
-        router.push('/dashboard');
-        setError('');
-        setMessage('Registration successful.');
+        router.push('/dashboard')
         
       }else{
         setError(createdUser.message)
       }
+     
    
     }
      catch (error) {

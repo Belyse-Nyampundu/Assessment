@@ -26,7 +26,6 @@ const usePostLogin = () => {
         if (response.response.id && response.response.token) { 
              console.log("Login successful:", response.data);
                  setIsSuccessMessage(true);
-            //    localStorage.setItem("token", response.response.token)
                  router.push("/dashboard")
                }else{
                 setError("something went wrong")
@@ -36,15 +35,6 @@ const usePostLogin = () => {
         setError(response.message)
     
       }
-  
-    //   if (response.response.id && response.response.token) { 
-    //     console.log("Login successful:", response.data);
-    //     setIsSuccessMessage(true);
-    //     router.push("/dashboard")
-    //   } else {
-    //     // setError(response.message || "Login failed");
-    //     console.log(response,"response")
-    //   }
     } catch (error) {
       console.error("An error occurred during login:", error);
       setError("An error occurred");
