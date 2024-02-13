@@ -26,10 +26,10 @@ const SignupPage = () => {
   });
   const [passwordMatchError, setPasswordMatchError] = useState(false);
   useEffect(()=>{
-    if (user){
+    if (user && router){
       router.push("/dashboard")
     }
-  },[user]
+  },[user, router]
   )
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement>

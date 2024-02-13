@@ -6,14 +6,14 @@ import Layout from "../components/Layout"
 
 
 const Dashboard = ()=>{
-    const token = localStorage.getItem("token")
-    console.log(token)
+    // const token = localStorage.getItem("token")
+    // console.log(token)
     return(
   <Layout>
         <div>
             {/* <Users/>
             <ParentComponent/> */}
-            <Layout children={undefined}/>
+            {/* <Layout children={undefined}/> */}
         </div>
         </Layout>
     )

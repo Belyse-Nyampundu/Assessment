@@ -4,12 +4,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 import Image from "next/image";
-import error from "next/error";
+import nextError from "next/error";
 import useLogin from "./hooks/userLogin";
 
 const LoginPage = () => {
   const [showPassword, setShowPassword] = useState(false);
   const { handleLogin, error } = useLogin();
+  const [formError, setFormError] = useState(null);
+
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -43,7 +45,7 @@ const LoginPage = () => {
             <h3 className="text-2xl md:text-3xl font-semibold text-gray-800 text-left mb-4">
               Welcome back
             </h3>
-            <h1 className=" text-gray-800 text-left mb-4">Welcome back! Please enter your details</h1>
+            <h1 className="text-gray-800 text-left mb-4">Welcome back! Please enter your details</h1>
             <form className="mt-6" onSubmit={handleSubmit}>
               <div className="mb-4 flex flex-col items-start">
                 <label className="text-[14px] text-gray-800  mt-10 font-semibold">Email</label>
@@ -126,7 +128,7 @@ const LoginPage = () => {
               </button>
               </Link>
               <p className="text-gray-600 mt-2 text-sm md:text-base ml-16 mt-12">
-                Don't have an account?{" "}
+                Do not have an account?{" "}
                 <Link href="/signup" className="text-teal-600">
                   Sign Up
                 </Link>
@@ -140,11 +142,10 @@ const LoginPage = () => {
       <Image
         src="/images/mou.jpeg"
         alt="Huza"
-        layout="intrustic"
+      
         width={500}
         height={400}
-        objectFit="cover"
-        className="object-cover h-full w-full"
+        className=""
       />
     </div>
   </div>

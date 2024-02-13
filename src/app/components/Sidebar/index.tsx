@@ -11,7 +11,7 @@ const Sidebar = () => {
   };
   return (
     <div className="h-screen w-120 bg-teal-600 fixed ">
-       <img src="/images/huza.png" alt="Logo" className="ml-5 mb-28 w-64 h-20 mt-16 items-center" />
+       {/* <img src="/images/huza.png" alt="Logo" className="ml-5 mb-28 w-64 h-20 mt-16 items-center" /> */}
     <div className="mt-5 ">
     <div className={`ml-8 mb-16 cursor-pointer ${ activeNavItem === '/' ? 'text-black' : 'text-white'}`}
           onClick={() => handleNavItemClick('/dashboard')} >
