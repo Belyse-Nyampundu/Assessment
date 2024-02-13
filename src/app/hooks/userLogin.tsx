@@ -27,9 +27,6 @@ const usePostLogin = () => {
              console.log("Login successful:", response.data);
                  setIsSuccessMessage(true);
             //    localStorage.setItem("token", response.response.token)
-
-             
-              
                  router.push("/dashboard")
                }else{
                 setError("something went wrong")

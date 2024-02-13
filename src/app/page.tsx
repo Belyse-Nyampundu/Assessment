@@ -39,16 +39,16 @@ const LoginPage = () => {
 
   return (
     <div className="bg-white min-h-screen">
-      <div className="flex justify-center items-center">
-        <div className="w-full lg:w-1/2 p-4">
+      <div className="flex justify-center items-center w-screen h-max">
+        <div className="basis-2/4 h-screen lg:w-1/2 p-32">
           <div className="flex flex-col items-center -mb-52">
             <h3 className="text-2xl md:text-3xl font-semibold text-gray-800 text-left mb-4">
               Welcome back
             </h3>
-            <h1 className="text-gray-800 text-left mb-4">Welcome back! Please enter your details</h1>
+            <h1 className=" text-gray-500 text-left mb-4">Welcome back! Please enter your details</h1>
             <form className="mt-6" onSubmit={handleSubmit}>
               <div className="mb-4 flex flex-col items-start">
-                <label className="text-[14px] text-gray-800  mt-10 font-semibold">Email</label>
+                <label className="text-[14px] text-gray-600  mt-10 font-semibold">Email</label>
                 <input
                   type="text"
                   name="email"
@@ -60,7 +60,7 @@ const LoginPage = () => {
               </div>
               <div className="mb-3 relative">
                 <div className="mb-4 flex flex-col items-start">
-                  <label className="text-[14px] text-gray-800 font-semibold">Password</label>
+                  <label className="text-[14px] text-gray-600 font-semibold">Password</label>
                   <input
                     type={showPassword ? "text" : "password"}
                     name="password"
@@ -105,7 +105,7 @@ const LoginPage = () => {
                   />
                   <label
                     htmlFor="rememberMe"
-                    className="text-gray-600 ml-2 text-lg"
+                    className="text-gray-600 ml-2 font-semibold text-base"
                   >
                     Remember for 30 days
                   </label>
@@ -113,7 +113,7 @@ const LoginPage = () => {
               </div>
               <div className="flex flex-col items-center ml-16">
                 <p className="text-gray-600 text-sm md:text-base -mt-10">
-                  <Link href="/forgot-password" className="text-teal-600 text-lg ml-48">
+                  <Link href="/forgot-password" className="text-[#6b44c7] font-semibold text-lg ml-48">
                     Forgot Password
                   </Link>
                 </p>
@@ -122,34 +122,23 @@ const LoginPage = () => {
               <button
                 type="submit"
                 onClick={handleSubmit}
-                className="w-full md:w-[400px] h-[55px] bg-teal-600 text-white rounded-xl py-2 text-lg md:text-xl lg:text-2xl mt-4"
+                className=" border border-[#6b44c7] w-full md:w-[400px] h-[55px] bg-[#27779b] text-white rounded-xl py-2 text-lg md:text-xl lg:text-2xl mt-4"
               >
                 Log In
               </button>
               </Link>
-              <p className="text-gray-600 mt-2 text-sm md:text-base ml-16 mt-12">
+              <p className="text-gray-600 mt-24 text-sm md:text-base ml-16 mt-12">
                 Do not have an account?{" "}
-                <Link href="/signup" className="text-teal-600">
+                <Link href="/signup" className="text-[#27779b]">
                   Sign Up
                 </Link>
               </p>
             </form>
           </div>
         </div>
-       <div className="lg:w-1/2 p-4 lg:ml-4 flex justify-center items-center">
-  <div className="w-full">
-    <div className="relative h-400">
-      <Image
-        src="/images/mou.jpeg"
-        alt="Huza"
-      
-        width={500}
-        height={400}
-        className=""
-      />
-    </div>
-  </div>
-</div>
+       <div className="basis-2/4 h-screen lg:w-1/2  w-full flex justify-center items-center login-background">
+         
+      </div>
       </div>
     </div>
   );
